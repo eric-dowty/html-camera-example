@@ -1,6 +1,6 @@
 <body>
 
-    <input type="file" value="Take Picture" capture="camera" accept="image/*" id="takePictureField">
+    <input type="file" capture="camera" accept="image/*" id="takePictureField">
         
     <img id="yourimage">
 
@@ -16,6 +16,8 @@
   var desiredWidth;
     $(document).ready(function() {
         console.log('onReady');
+
+
     $("#takePictureField").on("change",gotPic);
     $("#yourimage").load(getSwatches);
     desiredWidth = window.innerWidth;
